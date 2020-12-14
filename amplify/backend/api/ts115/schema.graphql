@@ -1,0 +1,18 @@
+type Project @model {
+  id: ID!
+  name: String!
+  number: String!
+  tasks: [String!]!
+}
+
+type Record @model {
+  id: ID!
+  project: Project! @connection
+  projectTask: String!
+  date: String!
+  hours: Float!
+  description: String!
+  submitted: Boolean!
+  invoiced: Boolean!
+  userId: String!
+}
