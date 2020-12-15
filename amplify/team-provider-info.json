@@ -34,6 +34,15 @@
       "StackName": "amplify-ts115-prod-222122",
       "StackId": "arn:aws:cloudformation:us-east-1:416904185688:stack/amplify-ts115-prod-222122/71c8b610-3dbb-11eb-bad6-0eecabf51e5d",
       "AmplifyAppId": "d32hvtv53clmx5"
+    },
+    "categories": {
+      "auth": {
+        "ts11582e893e9": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "ts11582e893e9PostConfirmation": {}
+      }
     }
   }
 }

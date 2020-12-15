@@ -101,8 +101,8 @@
         "Runtime": "nodejs10.x",
         "Timeout": "25",
         "Code": {
-          "S3Bucket": "amplify-ts115-dev-221049-deployment",
-          "S3Key": "amplify-builds/ts11582e893e9PostConfirmation-72795834465566614e78-build.zip"
+          "S3Bucket": "amplify-ts115-prod-222122-deployment",
+          "S3Key": "amplify-builds/ts11582e893e9PostConfirmation-5a64794c4c734b673177-build.zip"
         }
       }
     },
