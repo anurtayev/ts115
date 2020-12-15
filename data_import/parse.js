@@ -1,7 +1,7 @@
 const Papa = require("papaparse");
 const { readFileSync, writeFileSync } = require("fs");
 const { v4 } = require("uuid");
-const tableName = "Project-6jav73diczd4xl7pdh2r37drga-dev";
+const tableName = "Project-qd2us7aj6bdyjltciat3jdvzni-master";
 
 const getTasks = (file) =>
   Papa.parse(readFileSync(`./projects/${file}-Table 1.csv`, "utf-8")).data;
