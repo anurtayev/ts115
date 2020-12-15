@@ -28,6 +28,10 @@ export const ClickableElementStyles = `
   font-style: normal;
   letter-spacing: 0.75px;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: sandybrown;
+  }
 `;
 
 export const StyledRouterLink = styled(Link)([ClickableElementStyles]);
