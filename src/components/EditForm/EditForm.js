@@ -95,39 +95,43 @@ export const EditForm = () => {
               .catch((err) => console.error(err));
           }}
         >
-          {({ isSubmitting, values, errors, setFieldValue }) => (
-            <Form>
-              {
-                <>
-                  {fields.map(
-                    (field, index) =>
-                      field.visible && (
-                        <FieldElement
-                          field={field}
-                          key={index}
-                          payload={values[field.name]}
-                          optionsPromise={field.optionsPromise?.(values)}
-                          setFieldValue={setFieldValue}
-                        />
-                      )
-                  )}
-                </>
-              }
-              <ButtonsContainer>
-                <Button type="submit" disabled={isSubmitting}>
-                  Save
-                </Button>
-                <Button
-                  onClick={() => {
-                    history.push(callbackURI);
-                  }}
-                  disabled={isSubmitting}
-                >
-                  Cancel
-                </Button>
-              </ButtonsContainer>
-            </Form>
-          )}
+          {({ isSubmitting, values, errors, setFieldValue }) =>
+            isSubmitting ? (
+              <LoadingScreen />
+            ) : (
+              <Form>
+                {
+                  <>
+                    {fields.map(
+                      (field, index) =>
+                        field.visible && (
+                          <FieldElement
+                            field={field}
+                            key={index}
+                            payload={values[field.name]}
+                            optionsPromise={field.optionsPromise?.(values)}
+                            setFieldValue={setFieldValue}
+                          />
+                        )
+                    )}
+                  </>
+                }
+                <ButtonsContainer>
+                  <Button type="submit" disabled={isSubmitting}>
+                    Save
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      history.push(callbackURI);
+                    }}
+                    disabled={isSubmitting}
+                  >
+                    Cancel
+                  </Button>
+                </ButtonsContainer>
+              </Form>
+            )
+          }
         </Formik>
       </>
     );
